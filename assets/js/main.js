@@ -6,7 +6,7 @@ const input = document.getElementById("search-input")
 
 button.addEventListener("click" , async ()=>{
     const search = input.value;
-    const API_URL = `https://newsapi.org/v2/everything?q=${search}&from=2022-04-18&sortBy=publishedAt&apiKey=${API_KEY}`;
+    const API_URL = `https://newsapi.org/v2/everything?q=${search}&sortBy=publishedAt&apiKey=${API_KEY}`;
     const res = await fetch(API_URL);
     const data = await res.json();
     // console.log(data);
@@ -19,7 +19,7 @@ button.addEventListener("click" , async ()=>{
 input.addEventListener("keyup", async (e)=>{
     if(e.keyCode === 13){
         const search = input.value;
-        const API_URL = `https://newsapi.org/v2/everything?q=${search}&from=2022-04-18&sortBy=publishedAt&apiKey=${API_KEY}`;
+        const API_URL = `https://newsapi.org/v2/everything?q=${search}&sortBy=publishedAt&apiKey=${API_KEY}`;
         const res = await fetch(API_URL);
         const data = await res.json();
         // console.log(data);
